@@ -36,6 +36,18 @@ eagle.epf
 *.eps
 
 # =========================
+# PIC MPLAB Asembly Project
+# =========================
+*.o
+*.err
+*.lst
+*.map
+*.cof
+
+
+
+
+# =========================
 # Operating System Files
 # =========================
 
