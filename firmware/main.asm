@@ -24,6 +24,8 @@
 ;              http://hackaday.io/danjovic                            *
 ;                                                                     *
 ;**********************************************************************
+;              This code is licensed under GPL V2.0                   *
+;**********************************************************************
 ;         ASCII titles by http://patorjk.com/software/taag/           *
 ;**********************************************************************
 
@@ -390,6 +392,9 @@ VFrontPorch_Loop:  ; minus one to equalize timing
 	movlw .2         
 
 	goto VGA_Frame ;
+	
+; ************************** END OF VGA FRAME **************************
+
 
 
 
@@ -399,8 +404,6 @@ VFrontPorch_Loop:  ; minus one to equalize timing
 ; including the last return. only 151 cycles remain
 ; PINs from PORTC
 ;**********************************************************************
-
-
 
 
 ;**********************************************************************
@@ -717,10 +720,7 @@ FillClrTbl:
 
     incf FSR,f        ; 1 extra cycle
 
-
-
     ; 72 (5 + 67) cycles up to here, 57 cycles to the end.
-
     movlw .18         ;1      73
     movwf Temp        ;1      74
     decfsz Temp,f     ;1
@@ -729,10 +729,6 @@ FillClrTbl:
     nop               ;1      129
 
     return ; already taken into acconunt
-
-
-
-
 
 
 ;**********************************************************************
@@ -760,10 +756,11 @@ VGA_Last_line:
 	decfsz TMRCNTR,f   ; 1   1 check for timeout 
 	goto VGALLnoUpd    ; 1/2 2/3  no, finish the blank line
 
-; Randomize 2 cycles up to here
-
-   ;Pseudo Random number generator: Takes 12 cycles each
-   
+    ; Randomize 2 cycles up to here
+	
+;
+;Pseudo Random number generator: Takes 12 cycles each
+;
 ; Random Line 1
     bcf     STATUS,C    ; 1     1
     rrf     RAND2_l1,F  ; 1     2
@@ -878,9 +875,7 @@ VGA_Last_line:
     nop                 ; 1   11
     nop                 ; 1   12    
    
-; 74 (2+12*6) cycles up to here, 55 to the end
-
-
+    ; 74 (2+12*6) cycles up to here, 55 to the end
     movf RAND0_l1,w     ; 1   76  reinit interval with random value
     andlw 0x0f          ; 1   77  between 0.36 and 0.63 seconds
     addlw .22           ; 1   78
@@ -890,9 +885,6 @@ VGA_Last_line:
     movlw  .14          ; 1   82
 	movwf Temp          ; 1   83
 	goto VLastL2        ; 2   84
-	
-
-	
 	
 VGALLnoUpd:
     ; 4 cycles up to here, 125 to end
@@ -908,9 +900,6 @@ VLastL2:
     movwf FSR         ;1  129
 
     return ; already taken into account
-
-
-
 
 ; 
 END

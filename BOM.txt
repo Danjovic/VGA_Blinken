@@ -1,0 +1,20 @@
+Partlist exported from C:/Users/user/Documents/GitHub/VGA_Blinken/circuit/VGA Blinken.sch at 28/11/2015 11:41:27
+
+Part Value     Device        Package       Description                                    MF        MPN           OC_FARNELL OC_NEWARK
++5V            1,6/0,8       1,6/0,8       THROUGH-HOLE PAD                                                                           
+C1   100n      C-EU          C025-024X044L CAPACITOR, European symbol                                                                 
+C2   22p       C-EU          C025-024X044L CAPACITOR, European symbol                                                                 
+C3   22p       C-EU          C025-024X044L CAPACITOR, European symbol                                                                 
+GND            1,6/0,8       1,6/0,8       THROUGH-HOLE PAD                                                                           
+IC1  PIC16F688 PIC16F676P    DIL14         14-Pin, Flash-Based 8-Bit CMOS Microcontroller MICROCHIP PIC16F676-I/P 9760512    54K2829  
+K1             FE06-1        FE06          FEMALE HEADER                                                          unknown    unknown  
+Q1   20.0      CRYSTALHC49S  HC49/S        CRYSTAL                                                                1667008    unknown  
+R1   120       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R2   220       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R3   120       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R4   220       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R5   120       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R6   220       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R7   100       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R8   100       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  
+R9   10k       R-EU_0204/2VL 0204VL        RESISTOR, European symbol                                                                  

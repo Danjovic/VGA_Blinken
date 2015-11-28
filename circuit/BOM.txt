@@ -1,0 +1,15 @@
+# VGA Blinking lights Bill of Materials
+
+IC1      - PIC16F688 Microprocessors, Microcontrollers, DSPs / ARM, RISC-Based Microcontrollers
+Q1       - Crystal, 20MHz HC49 package
+C1       - 100nF ceramic capacitor
+C2,C3    - 22pf ceramic capacitor
+R1,R3,R5 - 120 Ohms, 1/8W resistor  
+R2,R4,R6 - 220 Ohms, 1/8W resistor
+R7,R7    - 100 Ohms, 1/8W resistor
+R9       - 10k Ohm, 1/8W resistor
+K1       - 6 pin, 2.54mm (0.1") spacing pin header
+
+Miscellaneous
+14 pin DIL socket
+ 
